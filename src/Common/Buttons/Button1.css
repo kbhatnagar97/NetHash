@@ -1,0 +1,10 @@
+.Button {
+    background-color : red;
+    border : none ;
+    color : white;
+    margin : 1em;
+    font-family : 'Fredoka One';
+    border-radius: 1em;
+    height : 2.5em;
+    width : 7em; 
+}
