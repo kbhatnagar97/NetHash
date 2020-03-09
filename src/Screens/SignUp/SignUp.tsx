@@ -7,7 +7,7 @@ import {TextInput} from '../../Common/TextInput/TextInput'
 
 export const SignUp = () => {
     return(
-        <div className="WholePage">
+        <body>
             <div className="head">
                 <Switch/>
             </div>
@@ -15,9 +15,9 @@ export const SignUp = () => {
                 <img src={Logo} />
             </div>
             <div className="SignUpContents">
-                <div className="SignUpText">
+                <h1 className="SignUpText">
                     Sign Up
-                </div>
+                </h1>
                 <div className="Inputs">
                     <TextInput text="Enter Username"/>
                     <TextInput text="Enter Email ID"/>
@@ -32,6 +32,6 @@ export const SignUp = () => {
                 </div>
             </div>
             
-        </div>
+        </body>
     );
 }

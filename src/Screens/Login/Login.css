@@ -1,0 +1,45 @@
+body {
+    background-color: #616161;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.netHash {
+    padding-left: 3em;
+    display : flex;
+    flex-direction: column;
+    align-self: start;
+}
+
+.loginContent {
+    background-color: #2f2f2f;
+    color : white;  
+    display : flex;
+    flex-direction: column;
+    align-self: start;
+    align-items: flex-start;
+    border-radius: 1em;
+    padding : 2em;
+    margin: 3em;
+}
+
+.head {
+    align-self: flex-end;
+    margin-left: auto;
+    padding : 1em
+}
+
+.LoginText {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    margin-bottom: 0.25em;
+    flex-direction: column;
+    align-self: start;
+}
+
+

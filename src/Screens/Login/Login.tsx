@@ -7,7 +7,7 @@ import {TextInput} from '../../Common/TextInput/TextInput'
 export const Login = () => {
 
     return(
-        <div className="wholePage">
+        <body>
             <div className="head">
                 <Switch/>
             </div>
@@ -15,9 +15,9 @@ export const Login = () => {
                 <img src={Logo}/>
             </div>
             <section className="loginContent">
-                <div className="LoginText">
+                <h1 className="LoginText">
                     Login
-                </div>
+                </h1>
                 <div className="input">
                     <TextInput text="Enter Username" />
                 </div>
@@ -28,7 +28,7 @@ export const Login = () => {
                     Sign Up
                 </div>
             </section>
-        </div>
+        </body>
 
     );
 }
