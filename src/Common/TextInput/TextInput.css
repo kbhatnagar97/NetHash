@@ -1,0 +1,19 @@
+.Text {
+    margin: 1em;
+    width : 20em;
+    height : 2.5em;
+    border : none;
+    background-color: black;
+    color : whitesmoke;
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+input::placeholder {
+    color : grey;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
