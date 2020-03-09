@@ -1,0 +1,55 @@
+
+/* Defining the size and position of the label container  */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+  }
+  
+  /* Defining the container of the toggle switch    */
+  .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+  
+  /* Defining the round button inside the switch  */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  /* THe color in the background when the toggle switch is checked */
+  input:checked + .slider {
+    background-color: black;
+  }
+  
+  /* The movement of the round button inside the switch */
+  input:checked + .slider:before {
+    -webkit-transform: translateX(27px);
+    -ms-transform: translateX(27px);
+    transform: translateX(27px);
+  }
+  
+  /* For making the switch button round */
+  .slider.round {
+    border-radius: 30px;
+  }
+  /* For making the button inside the switch round */
+  .slider.round:before {
+    border-radius: 50%;
+  }

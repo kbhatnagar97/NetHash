@@ -3,8 +3,9 @@ import './Switch.css';
 
 export const Switch = () => {
     return (
-        <div className="Switch">
-            
-        </div>
+        <label className="switch">
+            <input type="checkbox"/>
+            <span className="slider round"/>
+        </label>
     );
 }
