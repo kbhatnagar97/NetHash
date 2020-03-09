@@ -8,9 +8,7 @@ export const SignUp = () => {
     return(
         <div>
             SignUp
-            <Button/>
-            <Switch/>
-            <TextInput/>
+            <TextInput text="Hello1"/>
         </div>
     );
 }
