@@ -42,4 +42,11 @@ body {
     align-self: start;
 }
 
+.signUpTextNav {
+    color: grey;
+  }
+  
+.signUpTextNav:hover { 
+    color : whitesmoke;
+  }
 
