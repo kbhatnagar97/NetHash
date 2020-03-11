@@ -23,9 +23,9 @@ export const Login = () => {
       setText("Enter EmailID");
       setPassword(varInput)
       console.log(emailID)
-      console.log(i)
       console.log(password)
       //check API for emailID and password
+      window.open("https://www.tinyfor.me/nethashdemo","_self")
     }
   }
 
