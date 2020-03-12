@@ -14,12 +14,29 @@ export const SignUp = () => {
   const [Password, setPassword] = React.useState("");
 
   function data() {
-    console.log(firstName);
-    console.log(LastName);
-    console.log(EmailID);
-    console.log(MobileNumber);
-    console.log(Password);
+
+    const data = {
+      "first_name": firstName,
+      "last_name": LastName,
+      "email": EmailID,
+      "contact": MobileNumber,
+      "password": Password
+    }
     //add data to API
+    fetch('http://192.168.0.147:5000/register', {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' }
+    }).then((response)=> {
+        response.json().then((result)=>{
+          if(result.status==="success")
+          {
+            alert("Registerted Successfully !!")
+          }
+          
+        })
+      })
+
   }
 
   const navStyle = {
@@ -44,9 +61,9 @@ export const SignUp = () => {
           <TextInput text="Enter Password" inputValue={setPassword} />
         </div>
         <div className="nextButton">
-          <Link style={navStyle} to="login">
-            <Button onClick={data} />
-          </Link>
+          {/* <Link style={navStyle} to="login"> */}
+          <Button onClick={data} />
+          {/* </Link> */}
         </div>
         <Link style={navStyle} to="login">
           <div className="LoginTextNav">Already have an account? Login</div>

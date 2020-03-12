@@ -7,14 +7,14 @@ import { TextInput } from "../../Common/TextInput/TextInput";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
-  var i = 0
+  
   const [emailID, setEmailID] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [varInput, setVarInput] = React.useState("kbhatnagar97@gmail.com");
   const [text, setText] = React.useState("Enter EmailID");
   const [flag,setFlag]= React.useState(true);
   async function data() {
-    if (flag == true  ) {
+    if (flag === true  ) {
       setText("Enter Password");
       setEmailID(varInput)
       setFlag(false);
@@ -22,10 +22,13 @@ export const Login = () => {
     else {
       setText("Enter EmailID");
       setPassword(varInput)
-      console.log(emailID)
-      console.log(password)
-      //check API for emailID and password
-      window.open("https://www.tinyfor.me/nethashdemo","_self")
+      
+      const data = {
+        "email": emailID,
+        "password": varInput
+      }
+      console.log(data)
+      
     }
   }
 
