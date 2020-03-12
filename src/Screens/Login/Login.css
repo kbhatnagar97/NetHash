@@ -1,63 +1,62 @@
 body {
-    background-color: #616161;
-    display: flex;
-    margin: 0;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+  background-color: #616161;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 .loginContent {
-    background-color: #2f2f2f;
-    color : white;  
-    display : flex;
-    flex-direction: column;
-    align-self: start;
-    align-items: flex-start;
-    border-radius: 1em;
-    padding : 2em;
-    margin: 3em;
-    animation: fadeInAnimation ease 3s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
+  background-color: #2f2f2f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  align-items: flex-start;
+  border-radius: 1em;
+  padding: 2em;
+  margin: 3em;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-@keyframes fadeInAnimation { 
-    from {
-        transform: translate3d(100%, 0, 0);
-        opacity: 0;
-      }
-    
-      to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-} 
+@keyframes fadeInAnimation {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
 
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 
 .head {
-    align-self: flex-end;
-    margin-left: auto;
-    padding : 1em
+  align-self: flex-end;
+  margin-left: auto;
+  padding: 1em;
 }
 
 .LoginText {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    font-size: 2em;
-    margin-bottom: 0.25em;
-    flex-direction: column;
-    align-self: start;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  margin-bottom: 0.25em;
+  flex-direction: column;
+  align-self: start;
 }
 
 .signUpTextNav {
-    color: grey;
-  }
-  
-.signUpTextNav:hover { 
-    color : whitesmoke;
-  }
+  color: grey;
+}
 
-  .toast {
-    margin-top:2em
-  }
+.signUpTextNav:hover {
+  color: whitesmoke;
+}
+
+.toast {
+  margin-top: 2em;
+}

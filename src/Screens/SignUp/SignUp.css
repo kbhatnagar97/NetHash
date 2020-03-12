@@ -10,11 +10,11 @@ body {
   background-color: #2f2f2f;
   min-width: 16%;
   padding: 3em;
-  padding-bottom:4em;
+  padding-bottom: 4em;
   justify-self: center;
   border-radius: 1em;
   height: auto;
-  display : flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 0 auto;
@@ -28,19 +28,19 @@ body {
 }
 
 .SignUpText {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 1em;
-    font-size: 2em;
-    flex-direction: column;
-    align-self: center;
-    color: white;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1em;
+  font-size: 2em;
+  flex-direction: column;
+  align-self: center;
+  color: white;
 }
 
 .netHash {
   padding-left: 3em;
-  display : flex;
+  display: flex;
   flex-direction: column;
   align-self: start;
 }
@@ -49,6 +49,6 @@ body {
   color: grey;
 }
 
-.LoginTextNav:hover { 
-  color : whitesmoke;
+.LoginTextNav:hover {
+  color: whitesmoke;
 }

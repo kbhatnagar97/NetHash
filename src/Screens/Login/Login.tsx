@@ -66,7 +66,7 @@ export const Login = () => {
         </div>
         <div className="nextButton">
           {/* <Link style={navStyle} to="/signUp"> */}
-            <Button onClick={data} />
+          <Button onClick={data} />
           {/* </Link> */}
         </div>
         <Link style={navStyle} to="/signUp">

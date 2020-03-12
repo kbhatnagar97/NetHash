@@ -16,34 +16,31 @@ export const SignUp = () => {
   const [Password, setPassword] = React.useState("");
 
   function data() {
-
     const data = {
-      "first_name": firstName,
-      "last_name": LastName,
-      "email": EmailID,
-      "contact": MobileNumber,
-      "password": Password
-    }
+      first_name: firstName,
+      last_name: LastName,
+      email: EmailID,
+      contact: MobileNumber,
+      password: Password
+    };
     //add data to API
-    fetch('http://192.168.0.147:5000/register', {
+    fetch("http://192.168.0.147:5000/register", {
       method: "POST",
       body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' }
-    }).then((response)=> {
-        response.json().then((result)=>{
-          if(result.status==="success")
-          {
-            toast.success(result.message, {
-              position: toast.POSITION.BOTTOM_RIGHT
-            });          }
-          else
-          {
-            toast.error(result.message , {
-              position: toast.POSITION.BOTTOM_RIGHT
-            });          }
-        })
-      })
-
+      headers: { "Content-Type": "application/json" }
+    }).then(response => {
+      response.json().then(result => {
+        if (result.status === "success") {
+          toast.success(result.message, {
+            position: toast.POSITION.BOTTOM_RIGHT
+          });
+        } else {
+          toast.error(result.message, {
+            position: toast.POSITION.BOTTOM_RIGHT
+          });
+        }
+      });
+    });
   }
 
   const navStyle = {
