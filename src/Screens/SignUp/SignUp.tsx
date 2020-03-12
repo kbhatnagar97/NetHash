@@ -33,12 +33,14 @@ export const SignUp = () => {
         response.json().then((result)=>{
           if(result.status==="success")
           {
-            toast("Registerted Successfully")
-          }
+            toast.success(result.message, {
+              position: toast.POSITION.BOTTOM_RIGHT
+            });          }
           else
           {
-            toast(result.message)
-          }
+            toast.error(result.message , {
+              position: toast.POSITION.BOTTOM_RIGHT
+            });          }
         })
       })
 
@@ -66,9 +68,9 @@ export const SignUp = () => {
           <TextInput text="Enter Password" inputValue={setPassword} />
         </div>
         <div className="nextButton">
-          <Link style={navStyle} to="/login">
+          {/* <Link style={navStyle} to="/login"> */}
           <Button onClick={data} />
-          </Link>
+          {/* </Link> */}
         </div>
         <Link style={navStyle} to="/login">
           <div className="LoginTextNav">Already have an account? Login</div>
