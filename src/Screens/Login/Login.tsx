@@ -21,22 +21,26 @@ export const Login = () => {
       setEmailID(varInput);
       setFlag(false);
     } else {
-      setText("Enter EmailID");
       setPassword(varInput);
-
       Axios.post("http://192.168.0.147:5000/login", {
         email: emailID,
         password: varInput
       })
         .then(function(response) {
-          toast("Login Successful");
+          toast.success("Login Successful.", {
+            position: toast.POSITION.BOTTOM_RIGHT
+          });
           console.log("Pass");
           console.log(response);
           // window.open("https://www.tinyfor.me/nethashdemo","_self")
         })
         .catch(function(error) {
-          toast("Login credentials Incorrect");
+          toast.error("Login credentials were incorect.", {
+            position: toast.POSITION.BOTTOM_RIGHT
+          });
           console.log("Fail");
+          setText("Enter EmailID");
+          setFlag(true);
         });
     }
   }
@@ -61,9 +65,9 @@ export const Login = () => {
           {!flag && <TextInput text={text} inputValue={setVarInput} />}
         </div>
         <div className="nextButton">
-          <Link style={navStyle} to="/signUp">
+          {/* <Link style={navStyle} to="/signUp"> */}
             <Button onClick={data} />
-          </Link>
+          {/* </Link> */}
         </div>
         <Link style={navStyle} to="/signUp">
           <div className="signUpTextNav">Sign Up</div>
