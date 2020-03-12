@@ -5,6 +5,8 @@ import { Button } from "../../Common/Buttons/Button1";
 import { Switch } from "../../Common/Switch/Switch";
 import { TextInput } from "../../Common/TextInput/TextInput";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const SignUp = () => {
   const [firstName, setFirstName] = React.useState("");
@@ -31,9 +33,12 @@ export const SignUp = () => {
         response.json().then((result)=>{
           if(result.status==="success")
           {
-            alert("Registerted Successfully !!")
+            toast("Registerted Successfully")
           }
-          
+          else
+          {
+            toast(result.message)
+          }
         })
       })
 
@@ -61,13 +66,16 @@ export const SignUp = () => {
           <TextInput text="Enter Password" inputValue={setPassword} />
         </div>
         <div className="nextButton">
-          {/* <Link style={navStyle} to="login"> */}
+          <Link style={navStyle} to="/login">
           <Button onClick={data} />
-          {/* </Link> */}
+          </Link>
         </div>
-        <Link style={navStyle} to="login">
+        <Link style={navStyle} to="/login">
           <div className="LoginTextNav">Already have an account? Login</div>
         </Link>
+      </div>
+      <div className="toast">
+        <ToastContainer />
       </div>
     </body>
   );
