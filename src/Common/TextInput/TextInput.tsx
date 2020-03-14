@@ -4,12 +4,13 @@ import "./TextInput.css";
 export const TextInput = (props: {
   text?: string;
   inputValue: (string) => void;
+  className?: string;
 }) => {
   return (
-    <div className="TextInput">
+    <div className="Input ">
       <input
         type="text"
-        className="Text"
+        className={props.className}
         placeholder={props.text}
         onChange={event => props.inputValue(event.target.value)}
       />

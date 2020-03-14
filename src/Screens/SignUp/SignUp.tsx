@@ -23,7 +23,6 @@ export const SignUp = () => {
       contact: MobileNumber,
       password: Password
     };
-    //add data to API
     fetch("http://192.168.0.147:5000/register", {
       method: "POST",
       body: JSON.stringify(data),
@@ -58,11 +57,11 @@ export const SignUp = () => {
       <div className="SignUpContents">
         <h1 className="SignUpText">Sign Up</h1>
         <div className="Inputs">
-          <TextInput text="Enter First Name" inputValue={setFirstName} />
-          <TextInput text="Enter Last Name" inputValue={setLasttName} />
-          <TextInput text="Enter Email ID" inputValue={setEmailID} />
-          <TextInput text="Enter Mobile Number" inputValue={setMobileNumber} />
-          <TextInput text="Enter Password" inputValue={setPassword} />
+          <TextInput text="Enter First Name" inputValue={setFirstName} className="TextInput" />
+          <TextInput text="Enter Last Name" inputValue={setLasttName} className="TextInput" />
+          <TextInput text="Enter Email ID" inputValue={setEmailID} className="TextInput" />
+          <TextInput text="Enter Mobile Number" inputValue={setMobileNumber} className="TextInput" />
+          <TextInput text="Enter Password" inputValue={setPassword} className="TextInput" />
         </div>
         <div className="nextButton">
           {/* <Link style={navStyle} to="/login"> */}

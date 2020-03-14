@@ -1,0 +1,27 @@
+.headDashboard {
+  display: flex;
+  justify-content: space-between;
+  background-color: #535353;
+}
+
+.BarsLogo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Logo {
+  width: 15em;
+  height: 4em;
+  display: flex;
+  align-self: center;
+}
+
+.FaBars {
+  color: white;
+  display: flex;
+  align-self: center;
+  width: 1.5em;
+  height: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}

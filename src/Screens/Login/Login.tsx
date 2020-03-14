@@ -15,6 +15,11 @@ export const Login = () => {
   const [varInput, setVarInput] = React.useState("kbhatnagar97@gmail.com");
   const [text, setText] = React.useState("Enter EmailID");
   const [flag, setFlag] = React.useState(true);
+
+  function NavigatetoDemo() {
+    window.open("https://nethash.s3.ap-south-1.amazonaws.com/Code/player.html ","_self")
+  }
+
   async function data() {
     if (flag === true) {
       setText("Enter Password");
@@ -61,8 +66,8 @@ export const Login = () => {
       <section className="loginContent">
         <h1 className="LoginText">Login</h1>
         <div className="input">
-          {flag && <TextInput text={text} inputValue={setVarInput} />}
-          {!flag && <TextInput text={text} inputValue={setVarInput} />}
+          {flag && <TextInput text={text} inputValue={setVarInput} className="TextInput" />}
+          {!flag && <TextInput text={text} inputValue={setVarInput} className="TextInput" />}
         </div>
         <div className="nextButton">
           {/* <Link style={navStyle} to="/signUp"> */}
@@ -72,6 +77,8 @@ export const Login = () => {
         <Link style={navStyle} to="/signUp">
           <div className="signUpTextNav">Sign Up</div>
         </Link>
+        <div onClick={NavigatetoDemo} className="signUpTextNav">Continue as guest</div>
+
       </section>
       <div className="toast">
         <ToastContainer />

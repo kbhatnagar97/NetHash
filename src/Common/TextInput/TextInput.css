@@ -1,4 +1,4 @@
-.Text {
+.TextInput {
   margin-top: 1em;
   margin-bottom: 1em;
   width: 20em;
@@ -13,7 +13,29 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-input::placeholder {
+.TextInputDashboard {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 40em;
+  height: 2.5em;
+  border: none;
+  background-color: black;
+  color: whitesmoke;
+  padding-left: 1em;
+  border-radius: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.TextInput::placeholder {
+  color: grey;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.TextInputDashboard::placeholder {
   color: grey;
   font-size: 1em;
   font-weight: bold;
