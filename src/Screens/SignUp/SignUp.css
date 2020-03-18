@@ -45,9 +45,22 @@ body {
 }
 
 .LoginTextNav {
+  outline: none;
   color: grey;
 }
 
 .LoginTextNav:hover {
+  outline: none;
   color: whitesmoke;
+}
+
+.LoginTextNav:focus {
+  outline: none;
+  color: whitesmoke;
+}
+
+.LoginTextNav:active {
+  outline: none;
+  transition: all 0.3 s ease;
+  color: grey;
 }

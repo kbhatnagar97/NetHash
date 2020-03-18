@@ -58,4 +58,15 @@ body {
     color : whitesmoke;
   }
 
+  .signUpTextNav:focus { 
+    outline:none;
+    color : whitesmoke;
+  }
+
+  .signUpTextNav:active {
+    outline: none;
+    transition: all 0.3 s ease;
+    color: grey;
+  }
+
 

@@ -10,7 +10,8 @@
   border-radius: 1em;
   font-size: 1em;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline:none;
+  font-family: sans-serif;
 }
 
 .TextInputDashboard {
@@ -20,26 +21,30 @@
   height: 2.5em;
   border: none;
   background-color: black;
+  opacity: 0.5;
   color: whitesmoke;
   padding-left: 1em;
   border-radius: 1em;
   font-size: 1em;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline:none;
+  font-family: sans-serif;
 }
 
 .TextInput::placeholder {
   color: grey;
+  opacity: 0.5;
   font-size: 1em;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
 }
 
 .TextInputDashboard::placeholder {
   color: grey;
+  opacity: 0.5;
   font-size: 1em;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
 }
 
 @keyframes fadeInAnimation {

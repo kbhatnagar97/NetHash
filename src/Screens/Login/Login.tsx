@@ -11,7 +11,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const Login = () => {
   const [emailID, setEmailID] = React.useState("");
-  const [password, setPassword] = React.useState("");
   const [varInput, setVarInput] = React.useState("kbhatnagar97@gmail.com");
   const [text, setText] = React.useState("Enter EmailID");
   const [flag, setFlag] = React.useState(true);
@@ -20,13 +19,23 @@ export const Login = () => {
     window.open("https://nethash.s3.ap-south-1.amazonaws.com/Code/player.html ","_self")
   }
 
+  function enterPressed(event) {
+    if(event.which === 13)
+    {
+      // document.getElementById("Button").click();
+      console.log("I need to do DOM manipulation and click the button on the screen")
+      data()
+    }
+  }
+
   async function data() {
+    console.log("Button was clicked")
     if (flag === true) {
       setText("Enter Password");
       setEmailID(varInput);
+      setVarInput("")
       setFlag(false);
     } else {
-      setPassword(varInput);
       Axios.post("http://192.168.0.147:5000/login", {
         email: emailID,
         password: varInput
@@ -37,7 +46,7 @@ export const Login = () => {
           });
           console.log("Pass");
           console.log(response);
-          // window.open("https://www.tinyfor.me/nethashdemo","_self")
+          window.open("https://www.tinyfor.me/nethashdemo","_self")
         })
         .catch(function(error) {
           toast.error("Login credentials were incorect.", {
@@ -66,12 +75,12 @@ export const Login = () => {
       <section className="loginContent">
         <h1 className="LoginText">Login</h1>
         <div className="input">
-          {flag && <TextInput text={text} inputValue={setVarInput} className="TextInput" />}
-          {!flag && <TextInput text={text} inputValue={setVarInput} className="TextInput" />}
+          {flag && <TextInput text={text} inputValue={setVarInput} enterPressed={(event) => enterPressed(event)} className="TextInput" />}
+          {!flag && <TextInput text={text} inputValue={setVarInput} enterPressed={(event) => enterPressed(event)} className="TextInput" />}
         </div>
         <div className="nextButton">
           {/* <Link style={navStyle} to="/signUp"> */}
-          <Button onClick={data} />
+          <Button className="Button" onClick={data} />
           {/* </Link> */}
         </div>
         <Link style={navStyle} to="/signUp">
