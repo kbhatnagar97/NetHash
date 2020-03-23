@@ -37,3 +37,57 @@
   display: flex;
   align-self: center;
 }
+
+.MainBody {
+  display: flex;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  min-height: 70em;
+  min-width: 17em;
+  max-width: 17em;
+  height: 100%;
+  background-color: #535353 ;
+}
+
+.NavList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start
+} 
+
+ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.NavListIcon {
+  padding-right:1em;
+}
+
+.NavButton {
+  display: flex;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  padding:1em;
+}
+
+.NavButton:hover {
+  background-color: rgb(77, 77, 77);
+  color: white;
+  width:100%;
+}
+
+.NavButton:focus , .NavButton:active {
+  background-color: rgb(100, 100, 100);
+  width:100%;
+  outline: none;
+}
